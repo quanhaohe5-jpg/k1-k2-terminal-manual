@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K1/K2 接线端子使用说明书</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* 隐藏平台水印 */
+[class*="watermark"], [id*="watermark"], [class*="brand-mark"], [id*="brand-mark"],
+[class*="footer-logo"], [class*="powered-by"], [id*="powered-by"],
+div[style*="position: fixed"][style*="bottom: 0"][style*="right: 0"] {
+  display: none !important;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f5f5f7;
+  color: #1d1d1f;
+  line-height: 1.7;
+  font-size: 15px;
+}
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+}
+.header {
+  background: linear-gradient(135deg, #0071e3, #0056b3);
+  color: white;
+  padding: 32px 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.header p { font-size: 14px; opacity: 0.9; }
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0071e3;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0f0f0;
+}
+.section h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 16px 0 8px;
+  color: #333;
+}
+.section p { margin-bottom: 10px; color: #444; }
+.params-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.params-table th, .params-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+.params-table th {
+  background: #f8f8f8;
+  font-weight: 600;
+  color: #333;
+}
+.params-table td:first-child { color: #666; width: 30%; }
+.feature-list { list-style: none; }
+.feature-list li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+}
+.feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #34c759;
+  font-weight: 700;
+}
+.steps { counter-reset: step; list-style: none; }
+.steps li {
+  counter-increment: step;
+  padding: 10px 0 10px 40px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 26px;
+  height: 26px;
+  background: #0071e3;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 26px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.faq-item { margin-bottom: 16px; }
+.faq-q {
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 6px;
+  padding-left: 8px;
+  border-left: 3px solid #ff9500;
+}
+.faq-a { color: #555; padding-left: 11px; font-size: 14px; }
+.warning {
+  background: #fff3e0;
+  border-left: 4px solid #ff9500;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.warning strong { color: #ff9500; }
+.tip {
+  background: #e8f5e9;
+  border-left: 4px solid #34c759;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: #999;
+  font-size: 13px;
+}
+.fig-row {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+}
+.fig-row .fig {
+  flex: 1;
+  text-align: center;
+}
+.fig-row .fig img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.fig-row .fig-caption {
+  font-size: 13px;
+  color: #666;
+  margin-top: 6px;
+}
+.fig-single {
+  margin: 16px 0;
+  text-align: center;
+}
+.fig-single img {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.fig-single .fig-caption {
+  font-size: 13px;
+  color: #666;
+  margin-top: 6px;
+}
+@media (min-width: 768px) {
+  body { font-size: 16px; }
+  .header h1 { font-size: 28px; }
+  .section { padding: 28px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>K1/K2 接线端子</h1>
+    <p>使用说明书 · 快速接线 · 连接牢固</p>
+  </div>
+
+  <div class="section">
+    <h2>产品简介</h2>
+    <p>本说明书适用于 K1、K2 系列接线端子。该系列产品采用免焊接的快速接线方式，用于信号线及小电流电源线的对接与转接，接线简单、连接牢固，可广泛用于智能家居、安防布线和工业控制等场景。</p>
+    <table class="params-table">
+      <tr><th>项目</th><th>K1 接线端子</th><th>K2 接线端子</th></tr>
+      <tr><td>外壳材质</td><td>PC+PP 复合材质</td><td>PC+PP 复合材质</td></tr>
+      <tr><td>接线片</td><td>纯铜单卡刀</td><td>纯铜双卡刀</td></tr>
+      <tr><td>支持线径</td><td>0.4—0.7mm</td><td>0.4—0.9mm</td></tr>
+      <tr><td>外形尺寸</td><td>长12mm、宽6mm</td><td>长13.5mm、宽6.6mm</td></tr>
+      <tr><td>接线方式</td><td>剥线直插、钳压固定</td><td>剥线推入、双刀咬合</td></tr>
+      <tr><td>主要用途</td><td>细线径快速接线</td><td>宽线径兼容、高可靠接线</td></tr>
+    </table>
+    <div class="fig-row">
+      <div class="fig">
+        <img src="assets/image1.png" alt="K1接线端子">
+        <div class="fig-caption">图1 K1 接线端子</div>
+      </div>
+      <div class="fig">
+        <img src="assets/image2.png" alt="K2接线端子">
+        <div class="fig-caption">图2 K2 接线端子</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>产品特点</h2>
+    <ul class="feature-list">
+      <li><strong>阻燃绝缘外壳</strong>：PC+PP 复合材质，绝缘性好、阻燃抗冲击，长时间工作不易破裂。</li>
+      <li><strong>纯铜高导接线片</strong>：导电率高、电阻小，有效减少发热，抗氧化、寿命长。</li>
+      <li><strong>小巧迷你</strong>：长度仅 12—13.5mm，适合空间狭小的电气盒和智能家居布线。</li>
+      <li><strong>K2 双卡刀设计</strong>：双刀片咬合力更强，适合有轻微震动的场景，长期使用不掉线。</li>
+    </ul>
+    <div class="fig-single">
+      <img src="assets/image3.png" alt="K2双卡刀结构">
+      <div class="fig-caption">图3 K2 双卡刀结构示意</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>功能说明</h2>
+    <h3>K1 接线端子</h3>
+    <p>单卡刀设计，针对 0.4—0.7mm 细线径，精准刺破线皮、紧密咬合线芯，插拔顺畅，适合快速安装。</p>
+    <h3>K2 接线端子</h3>
+    <p>双卡刀结构，双点接触咬合，接触面积更大，接触电阻更低，防松动防脱落能力翻倍。支持 0.4—0.9mm 宽线径兼容。</p>
+  </div>
+
+  <div class="section">
+    <h2>适用场景</h2>
+    <h3>K1 接线端子</h3>
+    <p>智能门锁内部接线、智能音箱、门禁对讲机等设备的信号线连接。线径通常在 0.5mm 左右，单卡刀完全胜任。</p>
+    <h3>K2 接线端子</h3>
+    <p>工厂设备控制柜、配电箱内的信号或小电流电源线转接。工业环境可靠性要求高，K2 双重固定提供稳定连接。</p>
+  </div>
+
+  <div class="section">
+    <h2>使用教程</h2>
+    <div class="warning">
+      <strong>注意：</strong>接线前请先断开电源，确保在断电状态下操作。
+    </div>
+    <div class="fig-single">
+      <img src="assets/image4.png" alt="剥线钳">
+      <div class="fig-caption">图4 剥线钳</div>
+    </div>
+    <h3>K1 接线步骤</h3>
+    <ol class="steps">
+      <li>剥线：用剥线钳剥去导线端头绝缘皮，注意不要剪断或损伤内部铜芯。</li>
+      <li>处理线芯：多股细软线剥皮后，用手将铜丝顺一个方向拧紧，防止散开。</li>
+      <li>插入：将铜芯对准 K1 端子进线孔，用力直插到底，确保到达单卡刀位置。</li>
+      <li>压接：用老虎钳或尖嘴钳夹住端子，稍用力压接一下即可。</li>
+    </ol>
+    <div class="fig-single">
+      <img src="assets/image5.png" alt="端子压接操作">
+      <div class="fig-caption">图5 端子压接操作示意</div>
+    </div>
+    <h3>K2 接线步骤</h3>
+    <ol class="steps">
+      <li>剥线：剥去导线端头约 9—12mm 的绝缘皮。</li>
+      <li>理线：多股软线必须拧紧；单股硬线确保表面平直，让两把刀片同时刺破咬合。</li>
+      <li>插入：将导线对准进线孔平稳推入，让双卡刀刺破绝缘层并紧紧夹住线芯。</li>
+      <li>拉拔测试：接好后稍用力拉拽导线，纹丝不动说明双点咬合牢固；松动则拔出重插。</li>
+    </ol>
+    <div class="fig-single">
+      <img src="assets/image6.png" alt="接线完成效果">
+      <div class="fig-caption">图6 接线完成效果示意</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>常见问题</h2>
+    <div class="faq-item">
+      <div class="faq-q">K2 双卡刀比单卡刀好在哪里？</div>
+      <div class="faq-a">双倍稳固、低阻不发热。双卡刀提供两个咬合点，接触面积大一倍，接触电阻更小；抗拉拔和抗震动能力更强。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">PC+PP 材质有什么好处？</div>
+      <div class="faq-a">良好的绝缘性和阻燃性，保障接完线后使用安全。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">K1 能接 0.8mm 或 0.9mm 的粗线吗？</div>
+      <div class="faq-a">不能硬塞。硬塞会导致插不到底、刀片咬合不到位，甚至撑裂外壳。接粗线必须选 K2。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">为什么 K2 接完线一定要做拉拔测试？</div>
+      <div class="faq-a">因为 K2 是双刀结构，必须确保线深插到底，让两个刀片都刺破线皮。稍用力拉拽，不松动说明双点咬合到位。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">震动环境能用 K1 吗？</div>
+      <div class="faq-a">不太建议。K1 单卡刀抗拉拔能力有限，震动环境极易松脱，建议改用 K2，或接好后用扎带固定线缆。</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>注意事项</h2>
+    <ul class="feature-list">
+      <li>按线径选型：K1 支持 0.4—0.7mm，K2 支持 0.4—0.9mm，切勿硬塞粗线。</li>
+      <li>多股软线剥皮后必须拧紧再插入，避免铜丝散开造成接触不良。</li>
+      <li>接线前务必断开电源，断电操作，确保用电安全。</li>
+      <li>K2 接线完成后应进行拉拔测试，确认咬合到位、无松动。</li>
+      <li>震动或拉扯环境建议选 K2，或接好后用扎带固定线缆。</li>
+    </ul>
+    <div class="tip">
+      <strong>质保：</strong>1年质保，1年内提供换新服务，凭保修卡或订单申请售后。
+    </div>
+  </div>
+
+  <div class="footer">
+    K1/K2 接线端子使用说明书
+  </div>
+</div>
+<script>
+// 隐藏平台水印
+setInterval(() => {
+  document.querySelectorAll('*').forEach(el => {
+    if (el.children.length === 0 && el.textContent && el.textContent.includes('豆包AI生成')) {
+      let node = el;
+      while (node.parentElement) {
+        node = node.parentElement;
+        if (node.style.position === 'fixed' || node.style.position === 'absolute') {
+          node.style.display = 'none';
+          break;
+        }
+      }
+      el.style.display = 'none';
+    }
+  });
+}, 300);
+</script>
+</body>
+</html>
